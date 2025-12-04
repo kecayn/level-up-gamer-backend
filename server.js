@@ -32,7 +32,7 @@ app.use('/api/products', productRoutes);
 // Ruta de bienvenida
 app.get('/', (req, res) => {
   res.json({ 
-    mensaje: '✅ API de Level-Up-Gamer corriendo',
+    mensaje: ' API de Level-Up-Gamer corriendo',
     endpoints: {
       productos: 'GET /api/products',
       registro: 'POST /api/auth/register',
@@ -44,5 +44,5 @@ app.get('/', (req, res) => {
 
 // Iniciar servidor
 app.listen(PORT, () => {
-  console.log(`✅ Servidor backend corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor backend corriendo en http://localhost:${PORT}`);
 });
