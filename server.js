@@ -20,7 +20,9 @@ connectDB();
 // Middlewares para CORS y manejo de JSON
 app.use(cors({
   // Permite que React (en puerto 3000) se comunique con este servidor
-  origin: 'http://localhost:3000' 
+  origin: 'http://localhost:3000', 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Se añade PATCH para evitar errores CORS
+  allowedHeaders: ['Content-Type', 'Authorization'] // Se añaden cabeceras permitidas
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
